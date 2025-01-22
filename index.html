@@ -1,1 +1,111 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="title" content="expenses calculator"><meta name="description" content="simple web app to keep track of your expenses"><meta name="author" content="Lorenzo Botti"><meta name="theme-color" content="#0070F3"><link rel="stylesheet" href="https://fonts.xz.style/serve/inter.css"><link rel="stylesheet" href="/index.89bbcd30.css"><link rel="manifest" href="/manifest.webmanifest"><title>sonance</title></head><body> <header> <h1>expenses calculator</h1> </header> <form id="expense-form"> <label for="exp-type"> <input type="checkbox" name="exp-type" id="exp-type" checked> <span id="exp-type-out">expense</span> </label> <br> <label for="from"> spender: <input type="text" name="from" id="from" value="me" disabled> </label> <br> <label for="to"> receiver <input type="text" name="to" id="to"> </label> <br> <label for="reason"> reason: <input type="text" name="reason" id="reason"> </label> <br> <label for="amount"> amount: <input type="number" name="amount" id="amount" max="9999" min="0" step="0.01"> </label> <br> <button id="add">add</button> </form> <h2>transactions so far</h2> <p> you spent €<strong id="spent-out"></strong> and received €<strong id="received-out"></strong>. <br> your current balance is €<strong id="balance-out"></strong> </p> <ul id="list"></ul> <table id="table" style="display:none"></table> </body><script src="/index.f4842764.js" type="module"></script><script type="module">var r;r=new URL("service-worker.js",import.meta.url).toString(),"serviceWorker"in navigator&&window.addEventListener("load",(()=>{navigator.serviceWorker.register(r)}));</script></html>
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- <link rel="stylesheet" href="https://fonts.xz.style/serve/inter.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@exampledev/new.css@1.1.2/new.min.css"> -->
+
+    <style>
+        html,
+        body {
+            max-width: 100%;
+        }
+
+        body.dark {
+            background: #000;
+            color: #fff;
+        }
+
+        body.light {
+            background: #fff;
+            color: #000;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            body {
+                background: #000;
+                color: #fff;
+            }
+        }
+    </style>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ascii</title>
+  <script type="module" crossorigin src="/assets/index-CTFUC8M7.js"></script>
+</head>
+
+<body class="light">
+    <section id="controls">
+        <h3>ascii video thingy</h3>
+        <form id="form">
+            <label for="files">immagine:</label>
+            <input type="file" name="files" id="files" accept="image/*, video/*" bind:files />
+
+            <br>
+            <label for="input-height">altezza:</label>
+            <input type="number" name="height" id="input-height" max="300" min="1" value="40">
+
+            <br>
+            <input type="checkbox" name="bold" id="input-bold" checked>
+            <label for="input-bold">grassetto</label>
+
+            <br>
+            <input type="checkbox" name="darkmode" id="input-darkmode">
+            <label for="input-darkmode">tema scuro</label>
+
+            <br>
+            <input type="checkbox" name="color" id="input-color" checked>
+            <label for="color">colori</label>
+
+            <br>
+            <label for="ascii-dict">caratteri</label>
+            <select name="ascii-dict" id="ascii-dict">
+                <option value="minimalist">minimalist</option>
+                <option value="normal">normal</option>
+                <option value="normal2">normal2</option>
+                <option value="alphabetic">alphabetic</option>
+                <option value="alphanumeric">alphanumeric</option>
+                <option value="numerical">numerical</option>
+                <option value="extended">extended</option>
+                <option value="math">math</option>
+                <option value="arrow">arrow</option>
+                <option value="grayscale">grayscale</option>
+                <option value="max">max</option>
+                <option value="codepage437">codepage437</option>
+                <option value="blockelement">blockelement</option>
+                <option value="custom">custom</option>
+            </select>
+
+            <input type="text" name="ascii-custom" id="ascii-custom" disabled>
+
+            <br>
+            <label for="input-font-size">dimensione font:</label>
+            <input type="range" name="input-font-size" id="input-font-size" min="1" max="30" value="10">
+
+            <br />
+            <blockquote id="error-quote" style="display: none">
+
+            </blockquote>
+
+            <br />
+            <input type="submit" value="carica" />
+        </form>
+    </section>
+
+    <pre id="color-export" style="font-weight: bold; font-size: .3rem ">
+                        +---------------+                            
+                        |    il tuo     |                 .    .     
+                        |      video    |                            
+                        |       finirà  |                    u       
+                        |          qui! |                            
+                        +---------------|                            
+    </pre>
+    <div id="hidden" style="display: none;"></div>
+    <canvas id="canvas" style="display: none;"></canvas>
+
+</body>
+
+</html>
