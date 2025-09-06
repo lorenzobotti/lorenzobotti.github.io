@@ -3,109 +3,41 @@
 
 <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-
-    <!-- <link rel="stylesheet" href="https://fonts.xz.style/serve/inter.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@exampledev/new.css@1.1.2/new.min.css"> -->
-
-    <style>
-        html,
-        body {
-            max-width: 100%;
-        }
-
-        body.dark {
-            background: #000;
-            color: #fff;
-        }
-
-        body.light {
-            background: #fff;
-            color: #000;
-        }
-
-        @media (prefers-color-scheme: dark) {
-            body {
-                background: #000;
-                color: #fff;
-            }
-        }
-    </style>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ascii</title>
-  <script type="module" crossorigin src="/assets/index-CTFUC8M7.js"></script>
+
+    <title>garden.exe</title>
+  <script type="module" crossorigin src="/assets/index-BGeDu3HQ.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-CiDjZUbw.css">
 </head>
 
-<body class="light">
-    <section id="controls">
-        <h3>ascii video thingy</h3>
-        <form id="form">
-            <label for="files">immagine:</label>
-            <input type="file" name="files" id="files" accept="image/*, video/*" bind:files />
+<body>
+    <div id="bg" class="background-text">
+        fumo le sigarette
+        perchè mi piacciono un botto
+        i miei polmoni si seccano
+        ma non me ne importa
+        mi chiamo Richard Skateboard
+        e mi esprimo così
+        quando entro nel locale
+        fumo le sigarette
+        non mi dicono niente
+        sono gli anni sessanta
+        sono anni di tensioni e proteste
+        quindi fumo le sigarette per calmarmi
+    </div>
 
-            <br>
-            <label for="input-height">altezza:</label>
-            <input type="number" name="height" id="input-height" max="300" min="1" value="40">
+    <div id="app" class="foreground-text">
 
-            <br>
-            <input type="checkbox" name="bold" id="input-bold" checked>
-            <label for="input-bold">grassetto</label>
+        <h2 id="prev-testo">questo è un visualizzatore di testi per il concerto dei</h1>
+        <h1 id="main-testo">garden.exe</h1>
+        <h2 id="next-testo">che sarà comandato dai nostri amici con un topo senza fili</h1>
+            
+            <button id="next-btn">next</button>
 
-            <br>
-            <input type="checkbox" name="darkmode" id="input-darkmode">
-            <label for="input-darkmode">tema scuro</label>
+    </div>
 
-            <br>
-            <input type="checkbox" name="color" id="input-color" checked>
-            <label for="color">colori</label>
-
-            <br>
-            <label for="ascii-dict">caratteri</label>
-            <select name="ascii-dict" id="ascii-dict">
-                <option value="minimalist">minimalist</option>
-                <option value="normal">normal</option>
-                <option value="normal2">normal2</option>
-                <option value="alphabetic">alphabetic</option>
-                <option value="alphanumeric">alphanumeric</option>
-                <option value="numerical">numerical</option>
-                <option value="extended">extended</option>
-                <option value="math">math</option>
-                <option value="arrow">arrow</option>
-                <option value="grayscale">grayscale</option>
-                <option value="max">max</option>
-                <option value="codepage437">codepage437</option>
-                <option value="blockelement">blockelement</option>
-                <option value="custom">custom</option>
-            </select>
-
-            <input type="text" name="ascii-custom" id="ascii-custom" disabled>
-
-            <br>
-            <label for="input-font-size">dimensione font:</label>
-            <input type="range" name="input-font-size" id="input-font-size" min="1" max="30" value="10">
-
-            <br />
-            <blockquote id="error-quote" style="display: none">
-
-            </blockquote>
-
-            <br />
-            <input type="submit" value="carica" />
-        </form>
-    </section>
-
-    <pre id="color-export" style="font-weight: bold; font-size: .3rem ">
-                        +---------------+                            
-                        |    il tuo     |                 .    .     
-                        |      video    |                            
-                        |       finirà  |                    u       
-                        |          qui! |                            
-                        +---------------|                            
-    </pre>
-    <div id="hidden" style="display: none;"></div>
-    <canvas id="canvas" style="display: none;"></canvas>
 
 </body>
 
-</html>
+</html> 
